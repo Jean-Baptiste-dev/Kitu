@@ -39,7 +39,7 @@
 
   <RouterView />
 
-  <div class="footer">KITUI, tous droit réservé, 2023</div>
+  <footer>KITUI, tous droit réservé, 2023</footer>
 </template>
 
 <script>
@@ -70,10 +70,10 @@ export default {};
     transition: all 0.5s;
   }
 
-  .footer {
+  footer {
     text-align: center;
-    top: 14rem;
     color: #fff;
+    top: 30rem;
   }
   body {
     background-color: #223444;

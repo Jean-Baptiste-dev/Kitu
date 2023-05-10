@@ -6,7 +6,7 @@
           <p class="mode">Mode d'apparence</p>
           <div class="form-check form-switch">
             <input
-              class="form-check-input"
+              class="form-check-input bg-check"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
@@ -19,7 +19,9 @@
         </div>
 
         <div class="col-lg-9">
-          <div class="layout"></div>
+          <div class="layout">
+            <Layout />
+          </div>
         </div>
       </div>
     </div>
@@ -44,9 +46,13 @@ export default {
 
 .layout {
   width: 55rem;
-  height: 50rem;
+  height: 70rem;
   background-color: #fff;
   border-radius: 2rem;
   border: none;
+}
+
+.bg-check {
+  background-color: #d81e5b;
 }
 </style>

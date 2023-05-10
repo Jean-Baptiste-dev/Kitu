@@ -64,4 +64,13 @@ export default {
   border: #d81e5b;
   transition: all 0.6s;
 }
+.bg-bouton {
+  color: #d81e5b;
+}
+.bg-color {
+  color: #17a2b8;
+}
+.bg-typo {
+  color: #28a745;
+}
 </style>
