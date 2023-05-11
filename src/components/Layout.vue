@@ -72,6 +72,11 @@
     </div>
     <div class="container-components-details">
       <div class="container-buttons">
+        <div class="config-kit">
+          <RouterLink to="/config-bouton">
+            <i class="fa-duotone fa-gear">Configurer bouton</i>
+          </RouterLink>
+        </div>
         <div class="buttons">
           <div class="btn1">
             <button type="submit" class="kitui-btn">Bouton 1</button>
