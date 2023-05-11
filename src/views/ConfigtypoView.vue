@@ -6,7 +6,7 @@
         <div class="police">
           <span class="police-label">Police : </span>
           <span class="police-value"
-            ><select name="" id="">
+            ><select name="" v-model="cardData.police" id="">
               <option value="police1">police1</option>
               <option value="police2">police2</option>
             </select></span
@@ -15,7 +15,7 @@
         <div class="style">
           <span class="style-label">Style : </span>
           <span class="style-value">
-            <select name="" id="">
+            <select name="" id="" v-model="cardData.style">
               <option value="style1">style1</option>
               <option value="style2">style2</option>
             </select>
@@ -25,14 +25,14 @@
       <div class="titre">
         <span class="titre-label">Titre :</span>
         <span class="titre-value">
-          <select name="" id="">
+          <select name="" id="" v-model="cardData.titre">
             <option value="">h1</option>
             <option value="h2">h2</option>
           </select>
         </span>
       </div>
       <div class="config-typo-btn">
-        <button class="validate-typo" @click="valider">Valider</button>
+        <button class="validate-typo" @click="valider()">Valider</button>
       </div>
     </form>
     <div class="config-typo-btn">
@@ -43,7 +43,23 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      cardData: {
+        police: "",
+        style: "",
+        titre: "",
+      },
+    };
+  },
+
+  methods: {
+    valider() {},
+  },
+};
+</script>
 
 <style>
 .config-title-typo {

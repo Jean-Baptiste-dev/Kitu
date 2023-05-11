@@ -6,12 +6,20 @@
           <div class="config-width-height">
             <div class="config-width">
               <span class="width-label">La largeur</span>
-              <input type="text" class="input-width" />
+              <input
+                type="text"
+                v-model="cardData.largeur"
+                class="input-width"
+              />
             </div>
 
             <div class="config-height">
               <span class="height-label">La hauteur</span>
-              <input type="text" class="input-height" />
+              <input
+                type="text"
+                v-model="cardData.hauteur"
+                class="input-height"
+              />
             </div>
           </div>
 
@@ -21,6 +29,7 @@
               type="range"
               class="form-range custom-range"
               id="customRange1"
+              v-model="cardData.borderRadius"
             />
           </div>
         </div>
@@ -32,7 +41,7 @@
         </div>
       </div>
       <div class="config-card-btn">
-        <button class="validate-card" @click="valider">Valider</button>
+        <button class="validate-card" @click="valider()">Valider</button>
       </div>
 
       <div class="config-card-btn">
@@ -44,7 +53,22 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      cardData: {
+        largeur: "",
+        hauteur: "",
+        borderRadius: "",
+      },
+    };
+  },
+  methods: {
+    valider() {},
+  },
+};
+</script>
 
 <style>
 .config-card-vue-card {
