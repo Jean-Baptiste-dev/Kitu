@@ -4,20 +4,20 @@
     <div class="sombre-claire-acent">
       <div class="conf-sombre-label">
         <div class="sombre">
-          <input type="color" />
+          <input type="color" class="custom-type-color" v-model="sombre" />
         </div>
         <span class="config-label-sombre">Sombre</span>
       </div>
 
       <div class="conf-claire-label">
         <div class="claire">
-          <input type="color" />
+          <input type="color" class="custom-type-color" v-model="claire" />
         </div>
         <span class="config-label-sombre">Claire</span>
       </div>
       <div class="conf-acent-label">
         <div class="config-acent">
-          <input type="color" />
+          <input type="color" class="custom-type-color" v-model="acent" />
         </div>
         <span>Acent</span>
       </div>
@@ -28,7 +28,17 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {};
+  },
+
+  methods: {},
+
+  computed: {},
+};
+</script>
 
 <style>
 .config-tilte-color {
@@ -82,5 +92,12 @@
   border: 1px solid #d81e5b;
   color: #000000;
   transition: all 0.6s;
+}
+
+.custom-type-color {
+  width: 5rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
 }
 </style>
