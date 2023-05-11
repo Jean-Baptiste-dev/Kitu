@@ -25,16 +25,36 @@
     <div class="config-color-btn">
       <button class="validate-color">Valider</button>
     </div>
+
+    <div class="config-typo-btn">
+      <RouterLink to="/kitui">
+        <span>Retour</span>
+      </RouterLink>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      sombre: "",
+      claire: "",
+      acent: "",
+    };
   },
 
-  methods: {},
+  methods: {
+    addColor() {
+      if ($this.sombre) {
+        return $this.sombre;
+      } else if ($this.claire) {
+        return $this.claire;
+      } else {
+        return $this.acent;
+      }
+    },
+  },
 
   computed: {},
 };

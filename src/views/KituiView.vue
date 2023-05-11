@@ -7,6 +7,7 @@
           <div class="form-check form-switch">
             <input
               class="form-check-input bg-check"
+              :layout-color="mode.bgColor"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
@@ -30,7 +31,11 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      mode: {
+        bgColor: "",
+      },
+    };
   },
 
   methods: {},

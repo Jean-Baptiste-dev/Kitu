@@ -1,8 +1,8 @@
 <template>
-  <div class="container-color">
-    <div class="config-color">
+  <div class="container-color {{ bgColor == true ? 'custom-layout' : ''}}">
+    <div class="config-kit">
       <RouterLink to="/config-color">
-        <i class="fa-duotone fa-gear">Configurer</i>
+        <i class="fa-duotone fa-gear">Configurer couleur</i>
       </RouterLink>
     </div>
     <p class="title-ui-color">Les couleurs</p>
@@ -37,6 +37,11 @@
   </div>
 
   <div class="container-typo">
+    <div class="config-kit">
+      <RouterLink to="/config-typo">
+        <i class="fa-duotone fa-gear">Configurer typo</i>
+      </RouterLink>
+    </div>
     <p class="title-ui-color">La typographie</p>
     <div class="police-style">
       <div class="police-label-value">
@@ -89,13 +94,23 @@
 </template>
 <script>
 import { RouterLink } from "vue-router";
+
+export default {
+  props: {
+    bgColor: Boolean,
+  },
+};
 </script>
+
 <style>
 .title-ui-color {
   text-align: center;
   margin-top: 1rem;
   font-size: 20px;
   font-weight: bold;
+}
+.custom-layout {
+  background-color: #000;
 }
 .container-color,
 .container-typo {
@@ -249,7 +264,7 @@ import { RouterLink } from "vue-router";
   top: 2rem;
 }
 
-.config-color {
+.config-kit {
   display: flex;
   justify-content: center;
 }

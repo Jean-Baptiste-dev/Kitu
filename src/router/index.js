@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import KituiView from "@/views/KituiView.vue";
 import ConfigcolorView from "@/views/ConfigcolorView.vue";
+import ConfigtypoView from "@/views/ConfigtypoView.vue";
 import ConnexionView from "@/views/ConnexionView.vue";
 import InscriptionView from "@/views/InscriptionView.vue";
 
@@ -32,6 +33,11 @@ const router = createRouter({
       path: "/config-color",
       name: "configcolor",
       component: ConfigcolorView,
+    },
+    {
+      path: "/config-typo",
+      name: "configtypo",
+      component: ConfigtypoView,
     },
   ],
 });
