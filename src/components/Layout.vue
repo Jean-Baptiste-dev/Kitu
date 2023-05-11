@@ -88,6 +88,11 @@
       </div>
 
       <div class="container-cards">
+        <div class="config-kit">
+          <RouterLink to="/config-card">
+            <i class="fa-duotone fa-gear">Configurer card ou tuile</i>
+          </RouterLink>
+        </div>
         <div class="card-title-description">
           <span class="card-title">Titre</span>
 
