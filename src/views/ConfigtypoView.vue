@@ -1,39 +1,40 @@
 <template>
   <div class="container-config-typo">
     <span class="config-title-typo">Configuration de la typo</span>
-    <div class="container-police-style">
-      <div class="police">
-        <span class="police-label">Police : </span>
-        <span class="police-value"
-          ><select name="" id="">
-            <option value="police1">police1</option>
-            <option value="police2">police2</option>
-          </select></span
-        >
+    <form method="post">
+      <div class="container-police-style">
+        <div class="police">
+          <span class="police-label">Police : </span>
+          <span class="police-value"
+            ><select name="" id="">
+              <option value="police1">police1</option>
+              <option value="police2">police2</option>
+            </select></span
+          >
+        </div>
+        <div class="style">
+          <span class="style-label">Style : </span>
+          <span class="style-value">
+            <select name="" id="">
+              <option value="style1">style1</option>
+              <option value="style2">style2</option>
+            </select>
+          </span>
+        </div>
       </div>
-      <div class="style">
-        <span class="style-label">Style : </span>
-        <span class="style-value">
+      <div class="titre">
+        <span class="titre-label">Titre :</span>
+        <span class="titre-value">
           <select name="" id="">
-            <option value="style1">style1</option>
-            <option value="style2">style2</option>
+            <option value="">h1</option>
+            <option value="h2">h2</option>
           </select>
         </span>
       </div>
-    </div>
-    <div class="titre">
-      <span class="titre-label">Titre :</span>
-      <span class="titre-value">
-        <select name="" id="">
-          <option value="h1">h1</option>
-          <option value="h2">h2</option>
-        </select>
-      </span>
-    </div>
-    <div class="config-typo-btn">
-      <button class="validate-typo">Valider</button>
-    </div>
-
+      <div class="config-typo-btn">
+        <button class="validate-typo" @click="valider">Valider</button>
+      </div>
+    </form>
     <div class="config-typo-btn">
       <RouterLink to="/kitui">
         <span>Retour</span>

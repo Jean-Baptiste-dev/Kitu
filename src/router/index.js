@@ -3,6 +3,8 @@ import HomeView from "@/views/HomeView.vue";
 import KituiView from "@/views/KituiView.vue";
 import ConfigcolorView from "@/views/ConfigcolorView.vue";
 import ConfigtypoView from "@/views/ConfigtypoView.vue";
+import ConfigboutonView from "@/views/ConfigboutonView.vue";
+import ConfigcardView from "@/views/ConfigcardView.vue";
 import ConnexionView from "@/views/ConnexionView.vue";
 import InscriptionView from "@/views/InscriptionView.vue";
 
@@ -38,6 +40,16 @@ const router = createRouter({
       path: "/config-typo",
       name: "configtypo",
       component: ConfigtypoView,
+    },
+    {
+      path: "/config-bouton",
+      name: "configbouton",
+      component: ConfigboutonView,
+    },
+    {
+      path: "/config-card",
+      name: "configcard",
+      component: ConfigcardView,
     },
   ],
 });

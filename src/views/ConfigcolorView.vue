@@ -1,32 +1,45 @@
 <template>
   <div class="container-config-color">
-    <span class="config-tilte-color">Configuration de la couleur</span>
-    <div class="sombre-claire-acent">
-      <div class="conf-sombre-label">
-        <div class="sombre">
-          <input type="color" class="custom-type-color" v-model="sombre" />
+    <form action="" method="post">
+      <span class="config-tilte-color">Configuration de la couleur</span>
+      <div class="sombre-claire-acent">
+        <div class="conf-sombre-label">
+          <div class="sombre">
+            <input
+              type="color"
+              class="custom-type-color"
+              v-model="colorData.sombre"
+            />
+          </div>
+          <span class="config-label-sombre">Sombre</span>
         </div>
-        <span class="config-label-sombre">Sombre</span>
-      </div>
 
-      <div class="conf-claire-label">
-        <div class="claire">
-          <input type="color" class="custom-type-color" v-model="claire" />
+        <div class="conf-claire-label">
+          <div class="claire">
+            <input
+              type="color"
+              class="custom-type-color"
+              v-model="colorData.claire"
+            />
+          </div>
+          <span class="config-label-sombre">Claire</span>
         </div>
-        <span class="config-label-sombre">Claire</span>
-      </div>
-      <div class="conf-acent-label">
-        <div class="config-acent">
-          <input type="color" class="custom-type-color" v-model="acent" />
+        <div class="conf-acent-label">
+          <div class="config-acent">
+            <input
+              type="color"
+              class="custom-type-color"
+              v-model="colorData.acent"
+            />
+          </div>
+          <span>Acent</span>
         </div>
-        <span>Acent</span>
       </div>
-    </div>
+      <div class="config-color-btn">
+        <button class="validate-color" @click="valider">Valider</button>
+      </div>
+    </form>
     <div class="config-color-btn">
-      <button class="validate-color">Valider</button>
-    </div>
-
-    <div class="config-typo-btn">
       <RouterLink to="/kitui">
         <span>Retour</span>
       </RouterLink>
@@ -38,9 +51,11 @@
 export default {
   data() {
     return {
-      sombre: "",
-      claire: "",
-      acent: "",
+      colorData: {
+        sombre: "",
+        claire: "",
+        acent: "",
+      },
     };
   },
 
