@@ -59,17 +59,7 @@ export default {
     };
   },
 
-  methods: {
-    addColor() {
-      if ($this.sombre) {
-        return $this.sombre;
-      } else if ($this.claire) {
-        return $this.claire;
-      } else {
-        return $this.acent;
-      }
-    },
-  },
+  methods: {},
 
   computed: {},
 };

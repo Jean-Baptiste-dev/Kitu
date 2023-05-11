@@ -9,6 +9,7 @@
               type="range"
               class="form-range custom-range"
               id="customRange1"
+              v-model="boutonData.borderRadius"
             />
           </div>
 
@@ -18,6 +19,7 @@
               type="range"
               class="form-range custom-range"
               id="customRange1"
+              v-model="boutonData.textSize"
             />
           </div>
           <span class="mg-interne">Les marges internes</span>
@@ -25,12 +27,20 @@
             <div class="vertical-horizontale">
               <div class="vertical">
                 <span class="bd-label">Vertical</span>
-                <input type="text" class="bd-input" />
+                <input
+                  type="text"
+                  class="bd-input"
+                  v-model="boutonData.paddingVertical"
+                />
               </div>
 
               <div class="horizontal">
                 <span class="bd-label">Horizontal</span>
-                <input type="text" class="bd-input" />
+                <input
+                  type="text"
+                  class="bd-input"
+                  v-model="boutonData.paddingHorizontal"
+                />
               </div>
             </div>
           </div>
@@ -48,7 +58,7 @@
         </div>
       </div>
       <div class="config-bouton-btn">
-        <button class="validate-bouton" @click="valider">Valider</button>
+        <button class="validate-bouton" @click="valider()">Valider</button>
       </div>
     </form>
     <div class="config-bouton-btn">
@@ -61,10 +71,19 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      boutonData: {
+        borderRadius: "",
+        textSize: 0,
+        paddingVertical: "",
+        paddingHorizontal: "",
+      },
+    };
   },
 
-  methods: {},
+  methods: {
+    valider() {},
+  },
   computed: {},
 };
 </script>
